@@ -1,0 +1,56 @@
+Sure! Here is the complete command sequence for starting a brand-new project from a freshly opened CMD, connecting it to GitHub, and uploading your files for the first time.
+I'll use student-management as the example project name. You can replace it with your actual project name.
+
+Step 1: Open CMD and go to Documents
+cd /d "C:\Users\gujju\OneDrive\Documents"
+
+
+This moves CMD into your Documents folder.
+Step 2: Create a new project folder
+mkdir student-management
+
+
+mkdir means make directory (create a folder).
+Step 3: Enter that folder
+cd student-management
+
+
+Now CMD is inside your new project folder.
+Step 4: Initialize Git
+git init -b main
+
+
+This initializes Git in the new folder and creates the main branch.
+Step 5: Create your files
+Create your project files inside this folder—for example, hello.txt or your actual source-code files. You can use Notepad or your code editor.
+Step 6: Prepare and commit the files
+git add .
+git commit -m "Initial commit"
+
+
+- git add . prepares all changes in the current project folder.
+- git commit saves them as the first checkpoint.
+
+Step 7: Create a GitHub repository
+Go to GitHub and create a new repository named student-management.
+For a beginner, leave Add a README file unchecked so the online repository starts empty.
+Step 8: Connect your local project to GitHub
+Copy the repository's URL from GitHub, then run this command, replacing the example URL with your actual one:
+git remote add orgin https://github.com/YOUR-USERNAME/student-management.git
+
+
+Here, orgin is the nickname you prefer for the repository connection. You can use origin instead if you prefer; just use the same nickname in later commands.
+Step 9: Upload your first commit
+git push -u orgin main
+
+
+This uploads your commit to GitHub. If prompted, complete the GitHub sign-in process.
+
+After the first upload
+Whenever you modify or add files in this same project, you only need:
+git add .
+git commit -m "Describe your changes"
+git push
+
+
+You do not need to repeat git init or git remote add for that project.
